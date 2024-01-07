@@ -1,16 +1,20 @@
-import { notFound } from "next/navigation"
+import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
-export default function ProductDetail( { params }) {
+export const generateMetadata = ({ params }) => ({
+  title: `Product Detail - ${params.productId}`,
+  description: `Product Detail - ${params.productId}`,
+});
 
+export default function ProductDetail({ params }) {
+  console.log(params);
 
-    console.log(params)
-
-    if (params.productId > 120 ) {
-        return notFound()
-    }
-    return (
-        <div>
-            <h1> Product Detail about {params.productId}</h1>
-        </div>
-    )
+  if (params.productId > 120) {
+    return notFound();
+  }
+  return (
+    <div>
+      <h1> Product Detail about {params.productId}</h1>
+    </div>
+  );
 }
