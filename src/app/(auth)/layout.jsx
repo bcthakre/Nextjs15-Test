@@ -4,7 +4,7 @@ export default function ProductDetailLayout({ children }) {
       {children}{" "}
       <h1 style={{ backgroundColor: "red", color: "whitesmoke" }}>
         {" "}
-        Group Routes specific to auth-with-layout
+        Auth Folder Layout
       </h1>
     </>
   );
