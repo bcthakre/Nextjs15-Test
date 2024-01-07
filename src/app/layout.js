@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
         </header>
         {children}
         <footer>
-          <p class="bg:indigo-500">Footer</p>
+          <p className="bg:indigo-500">Footer</p>
         </footer>
       </body>
     </html>
