@@ -8,11 +8,25 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header>
-          <p className="bg:indigo-500">Header</p>
+          <p
+            style={{
+              backgroundColor: "indigo",
+              color: "white",
+            }}
+          >
+            Header
+          </p>
         </header>
         {children}
         <footer>
-          <p className="bg:indigo-500">Footer</p>
+          <p
+            style={{
+              backgroundColor: "lavender",
+              color: "black",
+            }}
+          >
+            Footer
+          </p>
         </footer>
       </body>
     </html>

@@ -1,15 +1,16 @@
 import { notFound } from "next/navigation"
 
-export default function ProductDetail({ params }) {
+export default function ProductDetail( { params }) {
+
 
     console.log(params)
 
-    if (parseInt(params.productId) > 20) {
-        notFound()
+    if (params.productId > 120 ) {
+        return notFound()
     }
     return (
         <div>
-            <h1>Product Details {params.productId}</h1>
+            <h1> Product Detail about {params.productId}</h1>
         </div>
     )
 }
