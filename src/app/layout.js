@@ -1,6 +1,9 @@
 export const metadata = {
-  title: "this is not description",
-  description: "Layout file from the upper most level",
+  title: {
+    default: 'Default title',
+    template: (title) => `${title} | My Site`,
+    absolute: 'My Site'
+  },
 };
 
 export default function RootLayout({ children }) {

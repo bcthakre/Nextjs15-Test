@@ -1,10 +1,8 @@
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
 
-export const generateMetadata = ({ params }) => ({
-  title: `Product Detail - ${params.productId}`,
-  description: `Product Detail - ${params.productId}`,
-});
+// export const generateMetadata = ({ params }) => ({
+//   title: `Product Detail - ${params.productId}`,
+// });
 
 export default function ProductDetail({ params }) {
   console.log(params);
