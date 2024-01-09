@@ -1,11 +1,25 @@
+'use client';
+
+import Link from "next/link";
+import React from "react";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { name: "Register", href: "/register" },
+  { name: "Login", href: "/login" },
+  { name: "Forgot Password", href: "/forgot-password" },
+];
+
 export default function ProductDetailLayout({ children }) {
+  const pathname = usePathname();
   return (
-    <>
-      {children}{" "}
-      <h1 style={{ backgroundColor: "red", color: "whitesmoke" }}>
-        {" "}
-        Auth Folder Layout
-      </h1>
-    </>
+    <React.Fragment>
+      {navLinks.map((link) => (
+        <Link href={link.href} key={link.name}>
+          {link.name}
+        </Link>
+      ))}
+      {children}
+    </React.Fragment>
   );
 }
