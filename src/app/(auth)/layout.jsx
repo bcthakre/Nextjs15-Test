@@ -12,14 +12,16 @@ const navLinks = [
 
 export default function ProductDetailLayout({ children }) {
   const pathname = usePathname();
+  
   return (
-    <React.Fragment>
+    <div>
       {navLinks.map((link) => (
         <Link href={link.href} key={link.name}>
+          const isActive = pathname.startsWith(link.href)
           {link.name}
         </Link>
       ))}
       {children}
-    </React.Fragment>
+    </div>
   );
 }
