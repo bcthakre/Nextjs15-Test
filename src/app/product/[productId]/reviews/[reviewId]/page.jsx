@@ -14,13 +14,13 @@ function getRandomInt(count) {
 }
 
 export default function ProductReview({ params }) {
-  const random = getRandomInt(2);
+//   const random = getRandomInt(2);
 
-  if (random === 1) {
-    throw new Error("Error created by me");
-  }
+//   if (random === 1) {
+//     throw new Error("Error created by me");
+//   }
 
-  console.log("Random number: ", random);   
+//   console.log("Random number: ", random);   
 
   if (parseInt(params.productId) > 20 || parseInt(params.reviewId) > 100) {
     notFound();
