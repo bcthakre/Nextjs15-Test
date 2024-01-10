@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 // });
 
 export default function ProductDetail({ params }) {
-  console.log(params);
+ 
 
   if (params.productId > 120) {
     return notFound();
