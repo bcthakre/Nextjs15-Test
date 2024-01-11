@@ -1,13 +1,4 @@
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//      <div>{ children }</div>
-//      <UserAnalytics />
-//      <RevenueMetrics />
-//      <NotificationMetrics />
-//     </html>
-//   );
-// }
+
 
 export default function Layout({ children, revenue, users, notifications }) {
   return (
