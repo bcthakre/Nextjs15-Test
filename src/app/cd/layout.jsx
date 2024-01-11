@@ -1,8 +1,16 @@
+export default function Layout({
+  children,
+  revenue,
+  users,
+  notifications,
+  login,
+}) {
+  // Logic should be placed outside of the return statement
+  const isLoggedIn = false;
 
-
-export default function Layout({ children, revenue, users, notifications }) {
-  return (
-    <html lang="en">
+  return isLoggedIn ? (
+    // Typically, you should use a <div> or <React.Fragment> instead of <html>
+    <div>
       <div>{children}</div>
       <div style={{ display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -11,6 +19,8 @@ export default function Layout({ children, revenue, users, notifications }) {
         </div>
         <div style={{ display: "flex", flex: 1 }}>{notifications}</div>
       </div>
-    </html>
+    </div>
+  ) : (
+    login
   );
 }
